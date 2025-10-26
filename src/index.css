@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
-/* Custom animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -31,7 +28,6 @@
   animation: fadeIn 0.8s ease-out;
 }
 
-/* Smooth transitions for dark mode */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
