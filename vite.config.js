@@ -7,4 +7,12 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+   build: {
+    rollupOptions: {
+      external: [],
+    }
+  },
+  optimizeDeps: {
+    include: ['react-icons']
+  }
 })
