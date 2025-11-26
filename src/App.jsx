@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router'; // Fixed import
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 
 function App() {
   React.useEffect(() => {
@@ -13,15 +15,27 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 transition-colors duration-300">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-900 transition-colors duration-300">
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
+            </>
+          } />
+          
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

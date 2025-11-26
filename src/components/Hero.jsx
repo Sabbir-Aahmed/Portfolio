@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import dp from "../assets/dp.jpeg";
+import { Link } from 'react-router'
 import {
   FaGithub,
   FaLinkedin,
@@ -86,7 +87,6 @@ const Hero = () => {
           experiences.
         </p>
 
-        {/* Rest of your component remains the same */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href="#projects"
@@ -95,14 +95,13 @@ const Hero = () => {
             View My Work
             <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
-          <a
-            href="/resume.pdf"
-            download
+          <Link
+            to="/resume"
             className="border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
           >
             <FaFileDownload className="w-4 h-4" />
-            Download Resume
-          </a>
+            View Resume
+          </Link>
         </div>
 
         <div>
