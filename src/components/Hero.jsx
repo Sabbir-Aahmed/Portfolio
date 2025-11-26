@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import dp from "../assets/dp.jpeg";
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+import resume from "../assets/Md Sabbir Ahmed resume.pdf";
 import {
   FaGithub,
   FaLinkedin,
@@ -8,48 +9,59 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-const Typewriter = ({ text, speed = 50, delay = 0 }) => {
-  const [displayText, setDisplayText] = useState("");
+const Typewriter = ({ texts, speed = 50, delay = 1000 }) => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showCursor, setShowCursor] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (currentIndex < text.length) {
-        setDisplayText(text.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
+    if (isPaused) return;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing mode
+        if (currentIndex < texts[currentTextIndex].length) {
+          setCurrentText(texts[currentTextIndex].slice(0, currentIndex + 1));
+          setCurrentIndex(currentIndex + 1);
+        } else {
+          setIsPaused(true);
+          setTimeout(() => {
+            setIsPaused(false);
+            setIsDeleting(true);
+          }, delay);
+        }
       } else {
-        const cursorInterval = setInterval(() => {
-          setShowCursor(prev => !prev);
-        }, 500);
-        
-        return () => clearInterval(cursorInterval);
+        if (currentIndex > 0) {
+          setCurrentText(texts[currentTextIndex].slice(0, currentIndex - 1));
+          setCurrentIndex(currentIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setCurrentTextIndex((currentTextIndex + 1) % texts.length);
+        }
       }
-    }, speed);
+    }, isDeleting ? speed / 2 : speed);
 
-    return () => clearTimeout(timer);
-  }, [currentIndex, text, speed]);
-
-  // Blink cursor during typing
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const cursorInterval = setInterval(() => {
-        setShowCursor(prev => !prev);
-      }, 500);
-      
-      return () => clearInterval(cursorInterval);
-    }
-  }, [currentIndex, text.length]);
+    return () => clearTimeout(timeout);
+  }, [currentIndex, isDeleting, isPaused, currentTextIndex, texts, speed, delay]);
 
   return (
     <span className="inline-block">
-      {displayText}
-      <span className={showCursor ? "opacity-100" : "opacity-0"}>|</span>
+      {currentText}
+      <span className="animate-pulse">|</span>
     </span>
   );
 };
 
 const Hero = () => {
+  const professions = [
+    "Full Stack Developer",
+    "React Developer",
+    "Django Developer",
+    "Software Engineer"
+  ];
+
   return (
     <section
       id="home"
@@ -71,13 +83,21 @@ const Hero = () => {
         {/* Typing Text */}
         <div className="mb-4">
           <h1 className="text-4xl md:text-6xl font-bold text-white">
-            <Typewriter text="Md Sabbir Ahmed" speed={100} />
+            <Typewriter 
+              texts={["Md Sabbir Ahmed"]} 
+              speed={100} 
+              delay={2000} 
+            />
           </h1>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-8 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center">
           <h2 className="text-xl md:text-2xl text-gray-300 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            <Typewriter text="Full Stack Developer" speed={80} delay={1500} />
+            <Typewriter 
+              texts={professions} 
+              speed={60} 
+              delay={1500} 
+            />
           </h2>
         </div>
 
@@ -91,17 +111,25 @@ const Hero = () => {
           <a
             href="#projects"
             className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105 group flex items-center justify-center gap-2"
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.querySelector('#projects');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             View My Work
             <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
-          <Link
-            to="/resume"
+          <a
+          href={resume}
+            download
             className="border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
           >
             <FaFileDownload className="w-4 h-4" />
-            View Resume
-          </Link>
+            Download Resume
+          </a>
         </div>
 
         <div>

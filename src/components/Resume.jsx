@@ -190,7 +190,7 @@ const Resume = () => {
                     <div className="flex items-start gap-4">
                       <FaAward className="text-green-400 mt-1 text-xl flex-shrink-0" />
                       <p className="text-gray-300 text-base leading-relaxed">
-                        Completed CS Fundamental & Software development course: Certificate
+                        Completed CS Fundamental & Software development course
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
