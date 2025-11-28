@@ -80,17 +80,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Typing Text */}
+        {/* Name - Static */}
         <div className="mb-4">
           <h1 className="text-4xl md:text-6xl font-bold text-white">
-            <Typewriter 
-              texts={["Md Sabbir Ahmed"]} 
-              speed={100} 
-              delay={2000} 
-            />
+            Md Sabbir Ahmed
           </h1>
         </div>
 
+        {/* Profession - Still with Typewriter */}
         <div className="mb-8 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center">
           <h2 className="text-xl md:text-2xl text-gray-300 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             <Typewriter 
@@ -123,7 +120,7 @@ const Hero = () => {
             <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
           <a
-          href={resume}
+            href={resume}
             download
             className="border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
           >
