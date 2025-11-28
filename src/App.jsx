@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
+import ProjectDetails from './components/ProjectDetails';
 
 function App() {
   // React.useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           } />
           
           <Route path="/resume" element={<Resume />} />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
         </Routes>
         
         <Footer />

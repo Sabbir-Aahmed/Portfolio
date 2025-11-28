@@ -1,14 +1,11 @@
 import React from 'react';
 import { 
   FaReact, 
-  FaJs, 
-  FaNodeJs, 
+  FaJs,  
   FaPython,
 } from 'react-icons/fa';
 import { 
-  SiTypescript, 
   SiTailwindcss,
-  SiMongodb,
   SiPostgresql,
   SiHtml5,
   SiBootstrap,
@@ -27,7 +24,6 @@ const Skills = () => {
     { name: 'PostgreSQL', level: 85, icon: SiPostgresql, color: 'text-blue-400' },
   ];
 
-  // Different animation types for variety
   const animationTypes = [
     'fade-up', 'fade-down', 'fade-left', 'fade-right',
     'zoom-in', 'zoom-in-up', 'flip-left', 'flip-right'
