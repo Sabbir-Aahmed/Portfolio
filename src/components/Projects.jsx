@@ -6,7 +6,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './Projects.css'; // We'll create this CSS file
+import '/src/Projects.css';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -187,14 +187,6 @@ const Projects = () => {
                         </div>
                       )}
                     </div>
-                    
-                    {project.featured && (
-                      <div className="absolute top-3 right-3">
-                        <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                          Featured
-                        </span>
-                      </div>
-                    )}
                   </div>
                   
                   <div className="p-6 flex-1 flex flex-col">

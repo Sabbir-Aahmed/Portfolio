@@ -133,7 +133,7 @@ const Resume = () => {
           <div className="p-4 lg:p-10">
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-12">
               
-              {/* Left Column - Static & Competitive Programming */}
+              {/* Left Column*/}
               <div className="lg:col-span-1 space-y-6">
                 
                 {/* Social Links */}
@@ -228,7 +228,7 @@ const Resume = () => {
 
               </div>
 
-              {/* Right Column - Dynamic Content from API */}
+              {/* Right Column*/}
               <div className="lg:col-span-2 space-y-6 lg:space-y-10">
                 
                 {/* Career Objective */}
@@ -269,7 +269,7 @@ const Resume = () => {
                   </div>
                 )}
 
-                {/* Projects - Single layer for mobile */}
+                {/* Projects*/}
                 {resume.resume_projects && resume.resume_projects.length > 0 && (
                   <div className="bg-gray-700 rounded-xl p-4 lg:p-8">
                     <h2 className="text-xl lg:text-3xl font-semibold text-white mb-4 lg:mb-6 border-b-2 border-indigo-500 pb-3 lg:pb-4">
@@ -315,7 +315,6 @@ const Resume = () => {
                             )}
                           </div>
                           
-                          {/* Divider between projects (except last one) */}
                           {index < resume.resume_projects.length - 1 && (
                             <div className="border-t border-gray-600 pt-6 lg:pt-8"></div>
                           )}
@@ -325,7 +324,7 @@ const Resume = () => {
                   </div>
                 )}
 
-                {/* Education - Single layer for mobile */}
+                {/* Education*/}
                 {resume.educations && resume.educations.length > 0 && (
                   <div className="bg-gray-700 rounded-xl p-4 lg:p-8">
                     <h2 className="text-xl lg:text-3xl font-semibold text-white mb-4 lg:mb-6 border-b-2 border-indigo-500 pb-3 lg:pb-4">
@@ -352,7 +351,6 @@ const Resume = () => {
                             <p className="text-gray-300 text-base lg:text-lg leading-relaxed">{education.description}</p>
                           )}
                           
-                          {/* Divider between education items (except last one) */}
                           {index < resume.educations.length - 1 && (
                             <div className="border-t border-gray-600 pt-6 lg:pt-8"></div>
                           )}

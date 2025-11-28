@@ -87,7 +87,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* Profession - Still with Typewriter */}
+        {/* Profession*/}
         <div className="mb-8 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center">
           <h2 className="text-xl md:text-2xl text-gray-300 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             <Typewriter 

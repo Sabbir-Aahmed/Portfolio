@@ -28,7 +28,7 @@ const About = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image Container - Slides in from left */}
+          {/* Image Container */}
           <div 
             data-aos="fade-right"
             data-aos-delay="200"
@@ -41,7 +41,7 @@ const About = () => {
             />
           </div>
           
-          {/* Content Container - Slides in from right */}
+          {/* Content Container*/}
           <div 
             className="space-y-6"
             data-aos="fade-left"

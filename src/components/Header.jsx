@@ -16,7 +16,6 @@ const Header = () => {
 
   const handleNavClick = (href, isHash) => {
     if (isHash) {
-      // For hash links, scroll to section
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -30,8 +29,22 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white animate-fadeIn">
-            Sabbir
+          <Link 
+            to="/" 
+            className="text-2xl font-bold text-white hover:text-indigo-400 transition duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span style={{ 
+                fontFamily: "'Righteous', sans-serif",
+                background: "linear-gradient(to right, #818cf8, #c084fc)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+                fontWeight: "bold",
+                fontSize: "2rem"
+              }}>
+                Sabbir
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

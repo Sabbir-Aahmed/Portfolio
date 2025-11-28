@@ -23,7 +23,17 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 text-center md:text-left">
-            <div className="text-2xl font-bold mb-2">Sabbir</div>
+            <span style={{ 
+                fontFamily: "'Righteous', sans-serif",
+                background: "linear-gradient(to right, #818cf8, #c084fc)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+                fontWeight: "bold",
+                fontSize: "2rem"
+              }}>
+                Sabbir
+            </span>
             <p className="text-gray-400">Building amazing digital experiences</p>
           </div>
           
