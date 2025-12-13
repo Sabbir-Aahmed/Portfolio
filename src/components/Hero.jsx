@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import dp from "../assets/dp.jpeg";
 import { Link } from 'react-router';
 import resume from "../assets/Md Sabbir Ahmed resume.pdf";
 import {

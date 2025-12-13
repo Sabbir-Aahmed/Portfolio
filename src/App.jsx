@@ -9,6 +9,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
 import ProjectDetails from './components/ProjectDetails';
+import Education from './components/Education';
+import Certifications from './components/Certifications';
 
 function App() {
   // React.useEffect(() => {
@@ -28,6 +30,8 @@ function App() {
               <About />
               <Skills />
               <Projects />
+              <Education/>
+              <Certifications/>
               <Contact />
             </>
           } />
