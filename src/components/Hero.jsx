@@ -70,18 +70,6 @@ const Hero = () => {
       className="min-h-screen flex items-center section-padding pt-20 bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto text-center p-10">
-        {/* Profile Picture */}
-        {/* <div className="relative w-32 h-32 mx-auto mb-8">
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 animate-pulse-slow"></div>
-          <div className="relative rounded-full w-full h-full overflow-hidden border-4 border-gray-900">
-            <img
-              src={dp}
-              alt="sabbir"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div> */}
-
         {/* Name - Static */}
         <div className="mb-4">
 

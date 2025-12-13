@@ -127,6 +127,7 @@ const Projects = () => {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
+          autoHeight={false}
           navigation={true}
           pagination={{ 
             clickable: true,
@@ -199,7 +200,7 @@ const Projects = () => {
                     </p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies?.slice(0, 4).map((tech, techIndex) => (
+                      {project.technologies?.map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="bg-indigo-900 text-indigo-300 px-3 py-1 rounded-full text-xs"
@@ -207,11 +208,7 @@ const Projects = () => {
                           {tech}
                         </span>
                       ))}
-                      {project.technologies?.length > 4 && (
-                        <span className="bg-gray-600 text-gray-300 px-3 py-1 rounded-full text-xs">
-                          +{project.technologies.length - 4}
-                        </span>
-                      )}
+                      
                     </div>
                     
                     <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-600">
