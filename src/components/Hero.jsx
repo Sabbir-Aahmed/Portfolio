@@ -6,7 +6,6 @@ import {
   FaLinkedin,
   FaFileDownload,
   FaArrowRight
-
 } from "react-icons/fa";
 import { SiCodechef, SiCodeforces, SiLeetcode } from "react-icons/si";
 
@@ -68,10 +67,9 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center section-padding pt-20 bg-gray-900 transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto text-center p-10">
+      <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-10">
         {/* Name - Static */}
         <div className="mb-4">
-
           <h2 className="inline-block text-2xl md:text-4xl font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
             Hi! I'm
           </h2>
@@ -80,9 +78,9 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* Profession*/}
+        {/* Profession */}
         <div className="mb-8 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center">
-          <h2 className="text-xl md:text-2xl text-gray-300 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-xl md:text-2xl bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             <Typewriter 
               texts={professions} 
               speed={60} 
@@ -124,55 +122,67 @@ const Hero = () => {
 
         <div>
           <p className="text-gray-400 mb-6">Find me on</p>
-          <div className="flex justify-center space-x-6">
+          
+          {/* Responsive Social Icons Container */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {/* GitHub */}
             <a
               href="https://github.com/Sabbir-Aahmed"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-gray-700 transition duration-300 transform hover:scale-110 hover:shadow-lg"
-              title="Github Profile"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-gray-300 hover:text-white hover:bg-gray-700 transition duration-300 transform hover:scale-110 hover:shadow-lg w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center"
+              title="GitHub Profile"
+              aria-label="GitHub"
             >
-              <FaGithub className="w-6 h-6" />
+              <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
 
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/md-sabbir-ahmed/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-blue-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
-              title="Linkedin Profile"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-gray-300 hover:text-white hover:bg-blue-600 transition duration-300 transform hover:scale-110 hover:shadow-lg w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center"
+              title="LinkedIn Profile"
+              aria-label="LinkedIn"
             >
-              <FaLinkedin className="w-6 h-6" />
+              <FaLinkedin className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
 
+            {/* LeetCode */}
             <a
               href="https://leetcode.com/u/mdsabbir5820/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-yellow-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-gray-300 hover:text-white hover:bg-yellow-600 transition duration-300 transform hover:scale-110 hover:shadow-lg w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center"
               title="LeetCode Profile"
+              aria-label="LeetCode"
             >
-              <SiLeetcode className="w-6 h-6" />
+              <SiLeetcode className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
 
+            {/* Codeforces */}
             <a
               href="https://codeforces.com/profile/Sabbir58"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-red-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-gray-300 hover:text-white hover:bg-red-600 transition duration-300 transform hover:scale-110 hover:shadow-lg w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center"
               title="Codeforces Profile"
+              aria-label="Codeforces"
             >
-              <SiCodeforces className="w-6 h-6" />
+              <SiCodeforces className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
 
+            {/* CodeChef */}
             <a
               href="https://www.codechef.com/users/mdsabbir5820"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-brown-600 transition duration-300 transform hover:scale-110 hover:scale-110 hover:shadow-lg"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-gray-300 hover:text-white hover:bg-[#9a3b00] transition duration-300 transform hover:scale-110 hover:shadow-lg w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center"
               title="CodeChef Profile"
+              aria-label="CodeChef"
             >
-              <SiCodechef className="w-6 h-6" />
+              <SiCodechef className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </div>
         </div>

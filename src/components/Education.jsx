@@ -39,7 +39,7 @@ const Education = () => {
         {/* Horizontal Card Container */}
         <div className="max-w-5xl mx-auto">
           {educationData.map((edu) => (
-            <div key={edu.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
+            <div key={edu.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden  transition-all duration-300">
               <div className="md:flex">
                 {/* Left Side - University Info */}
                 <div className="md:w-2/5 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 p-8 md:p-10 flex flex-col justify-center">
@@ -131,10 +131,10 @@ const Education = () => {
                       {edu.highlights.map((highlight, idx) => (
                         <div
                           key={idx}
-                          className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 hover:border-indigo-500/30 rounded-xl px-4 py-3 transition-all duration-300 group"
+                          className="bg-gray-800 hover:bg-gray-700/50  rounded-xl px-4 py-3 transition-all duration-300 group"
                         >
                           <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-indigo-600 rounded-full group-hover:scale-150 transition-transform"></div>
+                            
                             <span className="text-gray-300 text-sm">{highlight}</span>
                           </div>
                         </div>
