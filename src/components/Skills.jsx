@@ -1,27 +1,46 @@
 import React from 'react';
 import { 
   FaReact, 
-  FaJs,  
-  FaPython,
+  FaJs, 
+  FaPython, 
+  FaGitAlt, 
+  FaGithub,
+  FaCss3Alt 
 } from 'react-icons/fa';
 import { 
-  SiTailwindcss,
-  SiPostgresql,
-  SiHtml5,
-  SiBootstrap,
-  SiDjango
+  SiHtml5, 
+  SiC, 
+  SiCplusplus, 
+  SiDjango, 
+  SiTailwindcss, 
+  SiBootstrap, 
+  SiPostgresql, 
+  SiMysql,
+  SiVercel,
+  SiNetlify,
+  SiSupabase 
 } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
     { name: 'React', level: 90, icon: FaReact, color: 'text-blue-400' },
+    { name: 'Django', level: 90, icon: SiDjango, color: 'text-green-400' },
     { name: 'JavaScript', level: 92, icon: FaJs, color: 'text-yellow-400' },
     { name: 'Html', level: 100, icon: SiHtml5, color: 'text-blue-300' },
-    { name: 'Django', level: 90, icon: SiDjango, color: 'text-green-400' },
+    { name: 'CSS', level: 95, icon: FaCss3Alt, color: 'text-blue-500' },
     { name: 'Tailwind CSS', level: 95, icon: SiTailwindcss, color: 'text-cyan-400' },
-    { name: 'Python', level: 85, icon: FaPython, color: 'text-blue-300' },
     { name: 'Bootstrap', level: 95, icon: SiBootstrap, color: 'text-green-400' },
+    { name: 'Python', level: 85, icon: FaPython, color: 'text-blue-300' },
+    { name: 'C', level: 90, icon: SiC, color: 'text-blue-600' },
+    { name: 'C++', level: 95, icon: SiCplusplus, color: 'text-blue-700' },
     { name: 'PostgreSQL', level: 85, icon: SiPostgresql, color: 'text-blue-400' },
+    { name: 'MySQL', level: 80, icon: SiMysql, color: 'text-blue-500' },
+    { name: 'Git', level: 88, icon: FaGitAlt, color: 'text-orange-600' },
+    { name: 'GitHub', level: 90, icon: FaGithub, color: 'text-gray-500 dark:text-white' },
+    { name: 'Vercel', level: 85, icon: SiVercel, color: 'text-black dark:text-white' },
+    { name: 'Supabase', level: 80, icon: SiSupabase, color: 'text-green-500' },
+    { name: 'Netlify', level: 85, icon: SiNetlify, color: 'text-teal-500' },
+    
   ];
 
   const animationTypes = [

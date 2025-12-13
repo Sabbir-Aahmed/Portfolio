@@ -85,9 +85,9 @@ const Hero = () => {
         {/* Name - Static */}
         <div className="mb-4">
 
-          <h3 class="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
+          <h2 className="inline-block text-2xl md:text-4xl font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
             Hi! I'm
-          </h3>
+          </h2>
           <h1 className="text-4xl md:text-6xl font-bold text-white">
             Md Sabbir Ahmed
           </h1>
