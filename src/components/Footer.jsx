@@ -1,6 +1,7 @@
 
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { SiCodechef, SiCodeforces, SiLeetcode } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,22 @@ const Footer = () => {
       name: 'GitHub',
       icon: FaGithub,
       href: 'https://github.com/Sabbir-Aahmed',
-    }
+    },
+    {
+      name: 'LeetCode',
+      icon: SiLeetcode,
+      href: 'https://leetcode.com/u/mdsabbir5820/',
+    },
+    {
+      name: 'CodeForces',
+      icon: SiCodeforces,
+      href: 'https://codeforces.com/profile/Sabbir58',
+    },
+    {
+      name: 'CodeChef',
+      icon: SiCodechef,
+      href: 'https://www.codechef.com/users/mdsabbir5820',
+    },
   ];
 
   return (
