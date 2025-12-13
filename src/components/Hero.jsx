@@ -6,8 +6,10 @@ import {
   FaGithub,
   FaLinkedin,
   FaFileDownload,
-  FaArrowRight,
+  FaArrowRight
+
 } from "react-icons/fa";
+import { SiCodechef, SiCodeforces, SiLeetcode } from "react-icons/si";
 
 const Typewriter = ({ texts, speed = 50, delay = 1000 }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -69,7 +71,7 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto text-center p-10">
         {/* Profile Picture */}
-        <div className="relative w-32 h-32 mx-auto mb-8">
+        {/* <div className="relative w-32 h-32 mx-auto mb-8">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 animate-pulse-slow"></div>
           <div className="relative rounded-full w-full h-full overflow-hidden border-4 border-gray-900">
             <img
@@ -78,10 +80,14 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Name - Static */}
         <div className="mb-4">
+
+          <h3 class="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
+            Hi! I'm
+          </h3>
           <h1 className="text-4xl md:text-6xl font-bold text-white">
             Md Sabbir Ahmed
           </h1>
@@ -137,16 +143,49 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-gray-700 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              title="Github Profile"
             >
               <FaGithub className="w-6 h-6" />
             </a>
+
             <a
               href="https://www.linkedin.com/in/md-sabbir-ahmed/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-blue-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              title="Linkedin Profile"
             >
               <FaLinkedin className="w-6 h-6" />
+            </a>
+
+            <a
+              href="https://leetcode.com/u/mdsabbir5820/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-yellow-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              title="LeetCode Profile"
+            >
+              <SiLeetcode className="w-6 h-6" />
+            </a>
+
+            <a
+              href="https://codeforces.com/profile/Sabbir58"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-red-600 transition duration-300 transform hover:scale-110 hover:shadow-lg"
+              title="Codeforces Profile"
+            >
+              <SiCodeforces className="w-6 h-6" />
+            </a>
+
+            <a
+              href="https://www.codechef.com/users/mdsabbir5820"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 p-4 rounded-full text-gray-300 hover:text-white hover:bg-brown-600 transition duration-300 transform hover:scale-110 hover:scale-110 hover:shadow-lg"
+              title="CodeChef Profile"
+            >
+              <SiCodechef className="w-6 h-6" />
             </a>
           </div>
         </div>
