@@ -140,7 +140,7 @@ const Certifications = () => {
                   {certificates[selectedCertificate].tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-gray-600 hover:bg-gray-700/50 text-white rounded-xl px-2 py-2 transition-all duration-300 group"
+                      className="bg-gray-600 hover:bg-gray-500 text-white rounded-xl px-2 py-2 transition-all duration-300 group"
                     >
                       {tag}
                     </span>

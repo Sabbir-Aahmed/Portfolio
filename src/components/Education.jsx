@@ -1,4 +1,5 @@
 import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
+import grad from "../assets/grad.jpg";
 
 const Education = () => {
   const educationData = [
@@ -28,7 +29,7 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Education
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -39,43 +40,52 @@ const Education = () => {
         {/* Horizontal Card Container */}
         <div className="max-w-5xl mx-auto">
           {educationData.map((edu) => (
-            <div key={edu.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden  transition-all duration-300">
+            <div key={edu.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
               <div className="md:flex">
-                {/* Left Side - University Info */}
-                <div className="md:w-2/5 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 p-8 md:p-10 flex flex-col justify-center">
-                  <div className="text-center md:text-left">
-                    {/* University Logo/Icon */}
-                    <div className="flex justify-center md:justify-start mb-6">
-                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-4 rounded-2xl shadow-lg">
-                        <FaGraduationCap className="w-10 h-10 text-white" />
+                {/* Left Side - Background Image */}
+                <div 
+                  className="md:w-2/5 p-8 md:p-10 relative bg-cover bg-center"
+                  style={{ backgroundImage: `url(${grad})` }}
+                >
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/60"></div>
+                  
+                  {/* Content Container */}
+                  <div className="relative z-10 h-full flex flex-col justify-center">
+                    <div className="text-center md:text-left">
+                      {/* University Logo/Icon */}
+                      <div className="flex justify-center md:justify-start mb-6">
+                        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-4 rounded-2xl shadow-lg backdrop-blur-sm bg-white/10">
+                          <FaGraduationCap className="w-10 h-10 text-white" />
+                        </div>
                       </div>
-                    </div>
-                    
-                    {/* University Name */}
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {edu.university}
-                    </h3>
-                    
-                    {/* Location */}
-                    <div className="flex items-center justify-center md:justify-start gap-2 text-gray-300 mb-4">
-                      <FaMapMarkerAlt className="w-4 h-4" />
-                      <span>{edu.location}</span>
-                    </div>
-                    
-                    {/* Period */}
-                    <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-sm">
-                      <FaCalendarAlt className="w-4 h-4" />
-                      <span>{edu.period}</span>
-                    </div>
-                    
-                    {/* Active Badge */}
-                    {edu.active && (
-                      <div className="mt-6">
-                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse">
-                          Currently Enrolled
-                        </span>
+                      
+                      {/* University Name */}
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        {edu.university}
+                      </h3>
+                      
+                      {/* Location */}
+                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-200 mb-4">
+                        <FaMapMarkerAlt className="w-4 h-4" />
+                        <span>{edu.location}</span>
                       </div>
-                    )}
+                      
+                      {/* Period */}
+                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-300 text-sm">
+                        <FaCalendarAlt className="w-4 h-4" />
+                        <span>{edu.period}</span>
+                      </div>
+                      
+                      {/* Active Badge */}
+                      {edu.active && (
+                        <div className="mt-6">
+                          <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse backdrop-blur-sm">
+                            Currently Enrolled
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -111,9 +121,9 @@ const Education = () => {
                         <span className="text-gray-300 font-medium">Course Progress</span>
                         <span className="text-indigo-400 font-bold text-lg">{edu.progress}%</span>
                       </div>
-                      <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div className="w-full bg-gray-600 rounded-full h-3">
                         <div 
-                          className="bg-indigo-600 h-3 rounded-full transition-all duration-1500 ease-out"
+                          className="bg-gradient-to-r from-indigo-500 to-purple-500 h-3 rounded-full transition-all duration-1500 ease-out"
                           style={{ width: `${edu.progress}%` }}
                         ></div>
                       </div>
@@ -131,24 +141,20 @@ const Education = () => {
                       {edu.highlights.map((highlight, idx) => (
                         <div
                           key={idx}
-                          className="bg-gray-800 hover:bg-gray-700/50  rounded-xl px-4 py-3 transition-all duration-300 group"
+                          className="bg-gray-700/50 hover:bg-gray-700  rounded-xl px-4 py-3 transition-all duration-300 group"
                         >
                           <div className="flex items-center gap-2">
-                            
                             <span className="text-gray-300 text-sm">{highlight}</span>
                           </div>
                         </div>
                       ))}
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );
