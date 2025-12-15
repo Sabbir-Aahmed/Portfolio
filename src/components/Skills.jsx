@@ -50,7 +50,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section-padding bg-gray-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto p-10">
+      <div className="max-w-7xl mx-auto p-4 lg:p-10">
         <h2 
           className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
           data-aos="fade-down"

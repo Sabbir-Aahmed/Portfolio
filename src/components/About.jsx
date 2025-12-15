@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <section id="about" className="section-padding bg-gray-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto p-10">
+      <div className="max-w-7xl mx-auto p-4 lg:p-10 ">
         <h2 
           className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
           data-aos="fade-down"
@@ -37,7 +37,7 @@ const About = () => {
             <img
               src={sabbir}
               alt="About Me"
-              className="rounded-lg shadow-lg w-full h-130 object-cover transform hover:scale-105 transition duration-300"
+              className="rounded-lg shadow-lg w-full h-140 object-cover transform hover:scale-105 transition duration-300"
             />
           </div>
           

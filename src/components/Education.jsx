@@ -90,7 +90,7 @@ const Education = () => {
                 </div>
 
                 {/* Right Side - Degree Details */}
-                <div className="md:w-3/5 p-8 md:p-10">
+                <div className="md:w-3/5 p-6 md:p-10">
                   {/* Degree and Grade */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
