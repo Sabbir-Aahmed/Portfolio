@@ -6,7 +6,7 @@ const Education = () => {
     {
       id: 1,
       degree: 'B.Sc in Computer Science & Engineering',
-      grade: 'CGPA: 3.77',
+      grade: 'CGPA: 3.87',
       university: 'Uttara University',
       location: 'Dhaka, Bangladesh',
       period: '01-05-2022 to 31-04-2026',
